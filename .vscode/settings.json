@@ -1,0 +1,6 @@
+{
+  "code-auto-commit.autoPush": true,
+  "code-auto-commit.commitTimeInterval": 60000,
+  "css.format.braceStyle": "collapse",
+  "git.addAICoAuthor": "off"
+}
