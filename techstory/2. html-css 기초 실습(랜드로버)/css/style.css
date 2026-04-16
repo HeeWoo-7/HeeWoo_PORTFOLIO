@@ -1,4 +1,238 @@
 @charset "utf-8";
 body {margin: 0; padding: 0; font-family: "맑은 고딕";}
 
-     
+     <style>
+:root {
+  color-scheme: dark;
+  --bg: #0b1014;
+  --panel: rgba(255,255,255,0.08);
+  --panel-border: rgba(255,255,255,0.14);
+  --text: #f4f6f8;
+  --muted: #a9b3bd;
+  --accent: #d9a55f;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f2b33 0%, #0b1014 48%);
+  color: var(--text);
+  font-family: "Pretendard", "Segoe UI", Arial, sans-serif;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  width: 1100px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo img {
+  width: 140px;
+  height: auto;
+}
+nav ul {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+nav ul li a {
+  color: rgba(255,255,255,0.88);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+nav ul li a:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+#slider {
+  width: 1100px;
+  max-width: 95%;
+  margin: 0 auto 40px;
+}
+.hover-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  min-height: 450px;
+  box-shadow: 0 28px 80px rgba(0,0,0,0.35);
+}
+.hover-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.hover-slider img:first-child {
+  opacity: 1;
+}
+.hover-slider:hover img {
+  animation-play-state: paused;
+}
+.hover-slider img:nth-child(1) {
+  animation: slider-swap 12s infinite;
+  animation-delay: 0s;
+}
+.hover-slider img:nth-child(2) {
+  animation: slider-swap 12s infinite;
+  animation-delay: 4s;
+}
+.hover-slider img:nth-child(3) {
+  animation: slider-swap 12s infinite;
+  animation-delay: 8s;
+}
+@keyframes slider-swap {
+  0%, 20% {opacity: 1;}
+  25%, 100% {opacity: 0;}
+}
+.cards {
+  width: 1100px;
+  max-width: 95%;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+article {
+  flex: 1 1 0;
+  min-height: 320px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 24px 40px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+article h3 {
+  margin: 0 0 18px;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.hover-gallery {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.hover-gallery img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.hover-gallery img:first-child {
+  opacity: 1;
+}
+.hover-gallery:hover img:nth-child(1) {
+  animation: hover-swap 12s infinite;
+  animation-delay: 0s;
+}
+.hover-gallery:hover img:nth-child(2) {
+  animation: hover-swap 12s infinite;
+  animation-delay: 4s;
+}
+.hover-gallery:hover img:nth-child(3) {
+  animation: hover-swap 12s infinite;
+  animation-delay: 8s;
+}
+.hover-gallery:hover img:nth-child(4) {
+  animation: hover-swap 12s infinite;
+  animation-delay: 12s;
+}
+@keyframes hover-swap {
+  0%, 20% {opacity: 1;}
+  25%, 100% {opacity: 0;}
+}
+article h4 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: #ffffff;
+}
+article p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+.icon {
+  flex: 1 1 100px;
+  min-height: 100px;
+  padding: 16px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.icon:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.15);
+}
+.icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.icon span {
+  font-size: 13px;
+  color: var(--text);
+  text-align: center;
+}
+footer {
+  width: 1100px;
+  max-width: 95%;
+  margin: 0 auto 24px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+}
+footer img {
+  width: 120px;
+  height: auto;
+}
+footer p {
+  max-width: 760px;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+</style>
