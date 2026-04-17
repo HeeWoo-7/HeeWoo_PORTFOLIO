@@ -1,48 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let cities = ["seoul", "Tokyo", "london"];
-        console.log(cities[0]);
-        console.log(cities[2]);
-        cities[3] = "paris";
-        console.log(cities[3]);
+      let cities = ["seoul", "Tokyo", "london"];
+      console.log(cities[0]);
+      console.log(cities[2]);
+      cities[3] = "paris";
+      console.log(cities[3]);
 
-        let city = new Array(3);
-        console.log(city.length);
+      let city = new Array(3);
+      console.log(city.length);
 
-        city.length = 10; // 배열의 길이를 10으로 늘림
+      city.length = 10; // 배열의 길이를 10으로 늘림
 
-        console.log(city[4]);
-        city[4] = "abc";
-        console.log(city[4]);
+      console.log(city[4]);
+      city[4] = "abc";
+      console.log(city[4]);
 
+      city.length = 2; // 배열의 길이를 2로 줄임
+      for (let index = 0; index < city.length; index++) {
+        const element = city[index];
+      }
+      console.log(city);
 
-        city.length = 2; // 배열의 길이를 2로 줄임
-        for (let index = 0; index < city.length; index++) {
-            const element = city[index];
-        }
-        console.log(city);
+      let now = new Date();
+      let date = now.getDate();
+      let month = now.getMonth() + 1; // 월은 0부터 시작하므로 1을 더해줌
+      let hour = now.getHours();
+      console.log(now, date, month, hour, now.toLocaleDateString());
 
-        let now = new Date();
-        let date = now.getDate();
-        let month = now.getMonth() + 1; // 월은 0부터 시작하므로 1을 더해줌 
-        let hour = now.getHours();
-        console.log(now, date, month, hour, now.toLocaleDateString());
+      //실습 - 접속 시간을 가져와서 방문한 초시간이 짝수이면 violet,
+      // 방문한 초시간이 홀수면 lightblue로 배경색을 바꿔보세요.
+      let second = now.getSeconds();
+      if (second % 2 == 0) {
+        document.body.style.backgroundColor = "violet";
+      } else {
+        document.body.style.backgroundColor = "lightblue";
+      }
 
-        //실습 - 접속 시간을 가져와서 방문한 초시간이 짝수이면 violet,
-        // 방문한 초시간이 홀수면 lightblue로 배경색을 바꿔보세요.
-        let second = now.getSeconds();
-        if (second % 2 == 0) {
-            document.body.style.backgroundColor = "violet";
-        } else {
-            document.body.style.backgroundColor = "lightblue";
-        }
+      //string 객체 불견 객체, lenght를 변경할수 없음
+      let str = "hello";
+      str = str + ", java";
+      console.lg(str.length);
+      str.length = 300;
+      console.log(str.length);
+      //Math 객체
+      console.log(Math.PI); // 원주율
+      console.log(Math.floor(Math.random() * 10)); // 0~9 사이의 랜덤한 정수
     </script>
-</body>
+  </body>
 </html>
