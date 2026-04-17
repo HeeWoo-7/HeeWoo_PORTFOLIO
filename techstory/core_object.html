@@ -31,8 +31,9 @@
 
         let now = new Date();
         let date = now.getDate();
+        let month = now.getMonth() + 1; // 월은 0부터 시작하므로 1을 더해줌 
         let hour = now.getHours();
-        console.log(now, date, hour);
+        console.log(now, date, month, hour, now.toLocaleDateString());
 
     </script>
 </body>
