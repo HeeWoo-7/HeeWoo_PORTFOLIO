@@ -15,16 +15,20 @@
 
         let city = new Array(3);
         console.log(city.length);
+
+        city.length = 10; // 배열의 길이를 10으로 늘림
+
         console.log(city[4]);
         city[4] = "abc";
         console.log(city[4]);
 
+
+        city.length = 2; // 배열의 길이를 2로 줄임
         for (let index = 0; index < city.length; index++) {
             const element = city[index];
-            
         }
         console.log(city);
-        
+
     </script>
 </body>
 </html>
