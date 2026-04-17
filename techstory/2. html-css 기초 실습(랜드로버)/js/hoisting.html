@@ -19,7 +19,15 @@
         let num = parseInt(str3) + 1;
         let res = num / 33;
         let res2 = 3 % 2;
-        console.log(str, str2, str3, num, res, res2);
+let number2;let res3 = 23 + 35 + "abc"; //문자열이 포함되면 문자열로 변환됨
+let res4 = "abc" + 23 + 35; //문자열이 포함되면 문자열로 변환됨
+        console.log(str, str2, str3, num, res, res2, res3, res4);
+
+        let name = "홍길동";
+        if(name >= "홍길순") {
+            console.log("이름이 홍길동입니다."); //사전순으로 앞에있으면 더 작다
+        }
+
       //function 호이스팅 테스트
       printNumber(10);
       function printNumber(number3) {
