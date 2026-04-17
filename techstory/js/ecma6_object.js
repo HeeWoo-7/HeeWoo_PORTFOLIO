@@ -27,5 +27,12 @@ console.log(std1, std2, std3, std4);
 
 //3. 객체의 속성을 반복문으로 전부 읽어오기, for in
 let student = [std1, std2, std3, std4];
-for of(student)  console.log(element);
-  for in(student) console.log(element);
+for of (const element of student) {
+  console.log(element);
+} 
+for (const key in student) {
+  const element = student[key];
+  console.log(element);
+}
+
+//4. propertu, method 를 포함한 객체 작성 방법
