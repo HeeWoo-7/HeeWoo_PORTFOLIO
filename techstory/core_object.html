@@ -37,7 +37,12 @@
 
         //실습 - 접속 시간을 가져와서 방문한 초시간이 짝수이면 violet,
         // 방문한 초시간이 홀수면 lightblue로 배경색을 바꿔보세요.
-     
+        let second = now.getSeconds();
+        if (second % 2 == 0) {
+            document.body.style.backgroundColor = "violet";
+        } else {
+            document.body.style.backgroundColor = "lightblue";
+        }
     </script>
 </body>
 </html>
