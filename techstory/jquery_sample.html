@@ -9,20 +9,13 @@
 
 <script>
         $(document).ready(function () {
-            $('.text-1').html('<h3>html() 메서드</h1>') => {
-                if (i % 2 === 1) {
-                    $(this),css("background-color", "blue");
-                }
-            });
-            const $headers = $('h1');
+            $('.text-1').html('<h3>html() 메서드</h1>');
+                $('h1').css({
 
-            for (let i = 0; i < $headers.length; i++) {
-                if (i % 2 == 1) {
-                    const domElement = $headers.get(i);
-                    $(domElement).css('backgroundColor', 'red');
-                }
-            }
-        });
+                'color', 'red',
+                $('h1').css'backgroundColor' : 'yellow'
+            });
+            
     </script>
 <body>
      <h1 id="header"> jQuery</h1>
