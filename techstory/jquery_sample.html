@@ -8,8 +8,23 @@
 </head>
 <body>
      <h1>jQuery</h1>
-   <script>
-    $('#header').css("color", "red");
-</script>
+  <script>
+        $(document).ready(function () {
+            $('h1').each((i, element) => {
+                if (i % 2 === 1) {
+                    $(this),css("background-color", "blue");
+                }
+            });
+            const $headers = $('h1');
+
+            for (let i = 0; i < $headers.length; i++) {
+                if (i % 2 == 1) {
+                    const domElement = $headers.get(i);
+                    $(domElement).css('backgroundColor', 'red');
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>
