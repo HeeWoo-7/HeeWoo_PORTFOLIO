@@ -1,31 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Fixes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
     <h1 id="header">jQuery</h1>
     <p>이 내용이 사라집니다.</p>
-    <p>이 내영도 사라집니다.</p>
+    <p>이 내용도 사라집니다.</p>
+    <button>Hide paragraphs</button>
     <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("p").hide();
-            });
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p").hide();
         });
+      });
 
-        $(document).read(function() {
-            const $headers = $('h1');
-        });
-        for(let i = 0; 1 < $headers.length; I++ {
-            if(i % 2 == 1) {
-            const domElement = $headers.get(1);
-        $(domElement).CSS('backgroundColor', 'red');
-            }
+      $(document).ready(function () {
+        const $headers = $("h1");
+        for (let i = 0; i < $headers.length; i++) {
+          if (i % 2 === 1) {
+            const domElement = $headers.get(i);
+            $(domElement).css("background-color", "red");
+          }
         }
-    );
+      });
     </script>
-</body>
+  </body>
 </html>
